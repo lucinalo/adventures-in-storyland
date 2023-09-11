@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Read from "./pages/Read";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import StoryCurrent from "./pages/StoryCurrent";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    fetch("/api")
+    .then((res) => res.json())
+    .then((data) => { console.log(data)})
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/read" element={<Read />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/storycurrent" element={<StoryCurrent />} />
+      </Routes>
+      
   );
 }
 
