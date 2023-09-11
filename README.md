@@ -2,7 +2,7 @@
 
 Welcome to Adventures in Storyland, an interactive storytelling website for children.
 
-![Screenshot](Screenshot-2023-09-10.png)
+![Screenshot](Screenshot-2023-09-10.PNG)
 
 ## About
 
