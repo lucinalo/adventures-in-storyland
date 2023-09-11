@@ -2,6 +2,8 @@
 
 Welcome to Adventures in Storyland, an interactive storytelling website for children.
 
+![Screenshot](Screenshot-2023-09-10.png)
+
 ## About
 
 Adventures in Storyland is a web application built with React, Express.js, and other technologies. It provides a collection of captivating children's stories for young readers to explore.
